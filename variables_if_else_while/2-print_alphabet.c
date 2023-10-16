@@ -6,11 +6,11 @@
  * Return: 0 Succesful
  */
 
-int main (void)
+int main(void)
 {
 	char a;
 
-	for(a = 'a'; a <= 'z'; a++)
+	for (a = 'a'; a <= 'z'; a++)
 	{
 		putchar(a);
 	}
