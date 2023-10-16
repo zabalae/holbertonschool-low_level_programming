@@ -7,7 +7,7 @@
  *
  * n: random number
  *
- * if statement to check if the number is positive, negative or zero
+ * if: Check if the number is positive, negative or zero
  *
  * Return: 0 Successfu
  */
