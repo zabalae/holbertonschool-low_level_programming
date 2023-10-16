@@ -16,12 +16,12 @@ int main(void)
 		putchar(lower);
 	}
 
-	for(upper = 'A'; upper <= 'A'; upper++)
+	for(upper = 'A'; upper <= 'Z'; upper++)
 	{
 		putchar(upper);
 	}
 
-	putchar ('\n');
+	putchar('\n');
 
 	return(0);
 
