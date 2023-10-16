@@ -5,7 +5,7 @@
 /**
  * main: This is the entry point of the code
  *
- * Description: Checks if the random number is positive, negative or zero
+ * description: Checks if the random number is positive, negative or zero
  *
  * Return: 0 Successfu
  */
