@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main- prints all the numbers of base 16
+ * main - prints all the numbers of base 16
  *
  * Return 0
  */
@@ -16,7 +16,7 @@ int main(void)
 		putchar('0' + number);
 	}
 
-	for (letter = 'A'; letter <= 'F'; letter++)
+	for (letter = 'a'; letter <= 'f'; letter++)
 	{
 		putchar(letter);
 	}
