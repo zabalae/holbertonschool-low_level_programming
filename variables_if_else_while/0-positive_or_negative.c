@@ -3,14 +3,15 @@
 #include <stdio.h>
 
 /**
- * Check if the random number is potive, negative or zero
  * main: This is the entry point of the code
- * Return: 0 Successful
+ * Check if the random number is positive, negative or zero
+ * Return: 0 Successfu
  */
 int main(void)
 {
 	int n;
 	srand(time(0));
+
 	n = rand() - RAND_MAX / 2;
 
 	if (n > 0)
