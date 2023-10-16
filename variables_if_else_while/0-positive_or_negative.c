@@ -7,6 +7,8 @@
  *
  * n: random number
  *
+ * if statement to check if the number is positive, negative or zero
+ *
  * Return: 0 Successfu
  */
 int main(void)
