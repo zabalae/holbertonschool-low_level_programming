@@ -21,8 +21,9 @@ int main(void)
 			a++;
 		}
 
-		putchar ('\n');
-
-		return (0);
 	}
+	
+	putchar ('\n');
+
+	return (0);
 }
