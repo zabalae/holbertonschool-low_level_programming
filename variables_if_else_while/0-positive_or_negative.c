@@ -2,27 +2,31 @@
 #include <time.h>
 #include <stdio.h>
 
-/* betty style doc for function main goes there */
+/**
+ * main - This is the entry point of the code
+ * 
+ * Return - 0 Successful
+ */
 int main(void)
 {
 	int n;
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	if (n > 0);
+	if (n > 0)
 	{
-		printf("is positive")
+		printf("is positive");
 	}
-	else if (n == 0);
+	else if (n == 0)
 	{
-		printf("is zero")
+		printf("is zero");
 	}
-	else if (n < 0);
+	else if (n < 0)
 	{
-		printf("is negative")
+		printf("is negative");
 	}
-	else 
+	else
 	{
-		printf("error")
+		printf("error");
 	}
 	return (0);
 }
