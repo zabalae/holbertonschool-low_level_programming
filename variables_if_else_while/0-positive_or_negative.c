@@ -3,9 +3,7 @@
 #include <stdio.h>
 
 /**
- * main: This is the entry point of the code
- *
- * description: Checks if the random number is positive, negative or zero
+ * main: Print if n is positive, negative or zero
  *
  * Return: 0 Successfu
  */
