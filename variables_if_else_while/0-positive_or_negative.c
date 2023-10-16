@@ -3,9 +3,8 @@
 #include <stdio.h>
 
 /**
- * main - This is the entry point of the code
- * 
- * Return - 0 Successful
+ * main: This is the entry point of the code
+ * Return: 0 Successful
  */
 int main(void)
 {
@@ -14,15 +13,15 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	if (n > 0)
 	{
-		printf("is positive");
+		printf("%d is positive", n);
 	}
 	else if (n == 0)
 	{
-		printf("is zero");
+		printf("%d is zero", n);
 	}
 	else if (n < 0)
 	{
-		printf("is negative");
+		printf("%d is negative", n);
 	}
 	else
 	{
