@@ -8,5 +8,5 @@
 
 int _islower(int c)
 {
-	printf("%d", _islower(c));
+	_putchar('0' + c);
 }
