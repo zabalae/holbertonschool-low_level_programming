@@ -1,14 +1,7 @@
-#include "_putchar.c"
+#ifndef HEADER_FILE
+#define HEADER_FILE
 
+int _putchar(char)
 void print_alphabet(void);
-{
-	char x;
-	for(x = 'a'; x <= 'z'; x++)
-	{
-		_putchar(x);
-	}
 
-	_putchar('\n');
-
-	return (0);
-}
+#endif
