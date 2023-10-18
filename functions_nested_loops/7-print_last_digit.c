@@ -1,16 +1,18 @@
-#include "main.h"
+include "main.h"
 
 /**
- * print_last_digit- prints the last digit of a number
+ * print_last_digit- Prints last digit of a number
  *
- * @x: int number
+ * @x: int variable
  *
- * Return: 0
+ * Return 0
  */
 
 int print_last_digit(int x)
 {
-	last = x % 10;
+	int last;
 
+	last = x % 10;
+	
 	return (last);
 }
