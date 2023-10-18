@@ -13,11 +13,10 @@ int _abs(int x)
 
 	if (x < 0)
 	{
-		int nx;
 
-	        nx= x * -1;
+		x = x * -1;
 
-		return (nx);
+		return (x);
 	}
 
 	return (x);
