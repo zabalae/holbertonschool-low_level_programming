@@ -8,7 +8,7 @@
 
 int _abs(int)
 {
-	int x;
+	x;
 
 	if (x < 0)
 	{
@@ -21,4 +21,6 @@ int _abs(int)
 	{
 		_putchar(x);
 	}
+
+	return (x);
 }
