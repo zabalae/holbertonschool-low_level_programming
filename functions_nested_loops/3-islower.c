@@ -3,13 +3,14 @@
 /**
  * _islower- Checks for lowercase character
  *
- * Return: 0
+ * Return: 1 if c is lowercase 0 if its not
  */
 
 int _islower(int c)
 {
-	c = _islower(c);
-	_putchar(c + '0');
-
-	return (0);
+	if (c >= 97 && c <= 122)
+	{
+		return(1);
+	}
+	return(0);
 }
