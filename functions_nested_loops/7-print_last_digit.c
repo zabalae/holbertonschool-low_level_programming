@@ -5,7 +5,7 @@
  *
  * @x: int variable
  *
- * Return 0
+ * Return: last
  */
 
 int print_last_digit(int x)
@@ -14,7 +14,7 @@ int print_last_digit(int x)
 
 	last = x % 10;
 
-	_putchar(x + '0')
+	_putchar(x + '0');
 	
 	return (last);
 }
