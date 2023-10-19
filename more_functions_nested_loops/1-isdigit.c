@@ -5,7 +5,7 @@
  *
  * @c: variable
  *
- * Returns: 1 or 0
+ * Return: 1 or 0
  */
 
 int _isdigit(int c)
