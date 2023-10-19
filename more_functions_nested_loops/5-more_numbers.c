@@ -24,9 +24,9 @@ void more_numbers(void)
 			_putchar('0' + x  % 10);
 		}
 
+		_putchar('n');
+
 		y++;
 	}
-
-	_putchar('\n');
 
 }
