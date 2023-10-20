@@ -12,4 +12,4 @@ school: $(SRC) m.h
 	$(CC) -o $(NAME) $(SRC) m.h
 
 clean:
-	rm -f school
+	rm -f $(NAME)
