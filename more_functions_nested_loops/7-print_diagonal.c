@@ -18,7 +18,7 @@ void print_diagonal(int n)
 		{
 			if (x == y)
 			{
-				_putchar(92);
+				_putchar('92');
 			}
 
 			else
