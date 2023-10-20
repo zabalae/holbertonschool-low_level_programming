@@ -3,7 +3,7 @@ CFLAGS = -Wall
 
 all: school
 
-school: main.c
+school: main.c m.h
 	$(CC) $(CFLAGS) -o school main.c m.h
 
 clean:
