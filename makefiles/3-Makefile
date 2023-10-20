@@ -19,7 +19,7 @@ $(NAME): $(OBJ)
 	$(CC) -c $< -o $@
 
 clean:
-	$(RM) $(OBJ) $(NAME) *~ \#*\#
+	$(RM) $(NAME) *~ \#*\#
 
 oclean:
 	$(RM) $(OBJ)
