@@ -6,8 +6,23 @@ OBJ = $(SRC:.c=.o)
 
 NAME: school
 
+RM: rm -f
+
 all: $(NAME)
 
-school: $(SRC) m.h
-	$(CC) -o $(NAME) m.h
+$(NAME): $(OBJ)
+	$(CC) -o $@ $^
+
+%.o: %.c
+	$(CC) -c $< -o $@
+
+clean:
+	$(RM) $(OBJ) $(NAME) *~ .*~
+
+oclean:
+	$(RM) $(OBJ)
+
+fclean: clean oclean
+
+re: fclean all
 
