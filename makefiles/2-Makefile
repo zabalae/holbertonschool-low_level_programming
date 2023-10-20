@@ -9,7 +9,7 @@ NAME = school
 all: $(NAME)
 
 school: $(SRC) m.h
-	$(CC) -o $(NAME) $(SRC) m.h
+	$(CC) -o $@ $^
 
 clean:
 	rm -f $(NAME)
