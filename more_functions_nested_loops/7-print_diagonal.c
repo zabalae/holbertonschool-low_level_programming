@@ -10,8 +10,23 @@
 
 void print_diagonal(int n)
 {
-	while (n > 0)
-	{
+	int x, y;
 
+	for (x = 0; x < n; x++)
+	{
+		for (y = 0; y < n; y++)
+		{
+			if (x == y)
+			{
+				_putchar(92);
+			}
+
+			else
+			{
+				_putchar(' ');
+			}
+		}
+
+		_putchar('\n');
 	}
 }
