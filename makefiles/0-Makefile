@@ -3,8 +3,8 @@ CFLAGS = -Wall
 
 all: school
 
-school: main.c m.h
-	$(CC) $(CFLAGS) -o school main.c m.h
+school: main.c m.h school.c
+	$(CC) $(CFLAGS) -o school main.c m.h school.c
 
 clean:
 	rm -f school
