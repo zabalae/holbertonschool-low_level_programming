@@ -4,8 +4,8 @@ SRC = main.c school.c
 
 all: school
 
-school: $(SRS)
-	$(CC) -o school $(SRS)
+school: $(SRS) m.h
+	$(CC) -o school $(SRS) m.h
 
 clean: 
 	rm -f school
