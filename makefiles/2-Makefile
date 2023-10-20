@@ -13,3 +13,5 @@ school: $(SRC) m.h
 
 clean:
 	rm -f $(NAME)
+
+.PHONY: all clean
