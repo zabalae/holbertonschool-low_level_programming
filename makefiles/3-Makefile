@@ -4,14 +4,10 @@ SRC = main.c school.c
 
 OBJ = $(SRC:.c=.o)
 
-NAME = school
+NAME: school
 
 all: $(NAME)
 
 school: $(SRC) m.h
-	$(CC) -o $@ $^ m.h
+	$(CC) -o $(NAME) m.h
 
-clean:
-	rm -f $(NAME)
-
-.PHONY: all clean
