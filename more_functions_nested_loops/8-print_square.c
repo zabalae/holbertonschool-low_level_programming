@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_aquare - function that prints a square
+ * print_square - function that prints a square
  *
  * @size: size of the square
  *
@@ -17,18 +17,20 @@ void print_square(int size)
 		for (y = 0; y < size; y++)
 		{
 			if (y == x)
-
-			for (x = 0; x < size; x++)
 			{
-				_putchar(35);
 
-				break;
+				for (x = 0; x < size; x++)
+				{
+					_putchar(35);
+
+					break;
+				}
 			}
 
-			else
-			{
-				_putchar('\n');
-			}
+				else
+				{
+					_putchar('\n');
+				}
 		}
 	}
 
