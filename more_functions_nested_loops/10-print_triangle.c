@@ -28,7 +28,7 @@ void print_triangle(int size)
 
 			for (z = 1; y <= x; z++)
 			{
-				_putchar('35');
+				_putchar(35);
 			}
 
 			_putchar('\n');
