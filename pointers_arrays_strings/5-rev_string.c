@@ -10,7 +10,7 @@
 
 void rev_string(char *s)
 {
-	int x, y;
+	int x, y, z;
 
 	char *i = s;
 
@@ -23,8 +23,6 @@ void rev_string(char *s)
 
 	for (y = x - 1; y >= 0; y--)
 	{
-		int z = 0;
-
 		b[z] = s[y];
 
 		z++;
