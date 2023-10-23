@@ -23,12 +23,14 @@ void rev_string(char *s)
 	{
 		int z = 0;
 
-		i[z] = s[y];
+		char *b;
+
+		b[z] = s[y];
 
 		z++;
 	}
 
-	s = i;
+	s = b;
 
 	_putchar('\n');
 }
