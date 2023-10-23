@@ -12,6 +12,8 @@ void rev_string(char *s)
 {
 	int x, y, z;
 
+	z = 0;
+
 	char *i = s;
 
 	char *b = s;
