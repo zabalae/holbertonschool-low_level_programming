@@ -16,14 +16,14 @@ void rev_string(char *s)
 
 	for (x = 0; *i != '\0'; x++)
 	{
-		*i++;
+		i++;
 	}
 
 	for (y = x - 1; y >= 0; y--)
 	{
 		int z = 0;
 
-		*i[z] = s[y];
+		i[z] = s[y];
 
 		z++;
 	}
