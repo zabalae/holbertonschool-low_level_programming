@@ -19,10 +19,12 @@ void print_rev(char *s)
 		i++;
 	}
 
-	for (y = 0; y <= x; y++)
+	for (y = 0; s[y] != '\0'; y++)
 	{
 		_putchar(s[x]);
 
 		x--;
+
+		s++;
 	}
 }
