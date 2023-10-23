@@ -9,7 +9,7 @@
 int _strlen(char *s)
 {
 	int x;
-	char y[] = *s;
+	char y[] = *s[];
 
 	for (x = 0; y[x] != '\0'; x++);
 
