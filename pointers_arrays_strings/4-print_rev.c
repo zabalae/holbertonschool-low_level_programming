@@ -19,9 +19,11 @@ void print_rev(char *s)
 		i++;
 	}
 
-	for (y = x; y >= 0; y--)
+	for (y = x; y >= 0; )
 	{
 		_putchar(s[y]);
+
+		y--;
 	}
 
 	_putchar('\n');
