@@ -12,9 +12,11 @@ void print_rev(char *s)
 {
 	int x, y;
 
-	for (x = 0; *s != '\0'; x++)
+	char *i = *s;
+
+	for (x = 0; *i != '\0'; x++)
 	{
-		s++;
+		i++;
 	}
 
 	for (y = 0; y <= x; y++)
