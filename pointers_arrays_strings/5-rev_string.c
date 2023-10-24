@@ -14,9 +14,7 @@ void rev_string(char *s)
 
 	z = 0;
 
-	char *i = *s;
-
-	char *b = i;
+	char *i = s;
 
 	for (x = 0; *i != '\0'; x++)
 	{
@@ -25,12 +23,12 @@ void rev_string(char *s)
 
 	for (y = x - 1; y >= 0; y--)
 	{
-		b[z] = s[y];
+		i[z] = s[y];
 
 		z++;
 	}
 
-	s = b;
+	s = i;
 
 	_putchar('\n');
 }
