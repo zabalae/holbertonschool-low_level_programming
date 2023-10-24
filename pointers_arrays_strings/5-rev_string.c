@@ -16,7 +16,7 @@ void rev_string(char *s)
 
 	char *i = s;
 
-	char *b = s;
+	char *b = i;
 
 	for (x = 0; *i != '\0'; x++)
 	{
