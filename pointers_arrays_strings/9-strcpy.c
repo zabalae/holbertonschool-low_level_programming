@@ -7,7 +7,7 @@
  *
  * @src: the string to be copied
  *
- * return: dest
+ * Return: char
  *
  */
 
@@ -22,10 +22,12 @@ char *_strcpy(char *dest, char *src)
 		i++;
 	}
 
+	x = x + 1;
+
 	for (y = 0; y < x; y++)
 	{
 		dest[y] = src[y];
 	}
 
-	return(dest);
+	return (dest);
 }
