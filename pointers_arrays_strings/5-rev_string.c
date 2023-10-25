@@ -28,6 +28,8 @@ void rev_string(char *s)
 		z++;
 	}
 
+	s = i;
+
 
 	_putchar('\n');
 }
