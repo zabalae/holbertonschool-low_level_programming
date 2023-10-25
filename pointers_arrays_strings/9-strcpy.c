@@ -22,7 +22,7 @@ char *_strcpy(char *dest, char *src)
 		i++;
 	}
 
-	for (y = 0; y > x; y++)
+	for (y = 0; y < x; y++)
 	{
 		dest[y] = src[y];
 	}
