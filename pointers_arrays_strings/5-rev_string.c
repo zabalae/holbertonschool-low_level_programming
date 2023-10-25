@@ -10,11 +10,11 @@
 
 void rev_string(char *s)
 {
+	char *i = s;
+
 	int x, y, z;
 
 	z = 0;
-
-	char *i = s;
 
 	for (x = 0; *i != '\0'; x++)
 	{
@@ -25,11 +25,9 @@ void rev_string(char *s)
 	{
 		i[z] = s[y];
 
-		s[z] = i[z]
-
 		z++;
-
 	}
+
 
 	_putchar('\n');
 }
