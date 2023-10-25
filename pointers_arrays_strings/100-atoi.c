@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * atoi- Function that converts a string to a integer
+ * _atoi- Function that converts a string to a integer
  *
  * @s: string to be converted
  *
@@ -32,13 +32,13 @@ int _atoi(char *s)
 			result = result * 10 + (s[x] - '0');
 		}
 
-		else
-		{
-			break;
-		}
+		//else
+		//{
+		//	break;
+		//}
 
 		x++;
 	}
 
-	return result * sign;
+	return (result * sign);
 }
