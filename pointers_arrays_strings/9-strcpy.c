@@ -13,18 +13,18 @@
 
 char *_strcpy(char *dest, char *src)
 {
-	int x;
+	int x, y;
 
 	char *i = src;
 
 	for (x = 0; *i != '\0'; x++)
 	{
-		i++
+		i++;
 	}
 
 	for (y = 0; y == x; y++)
 	{
-		dest[y] = src[y]
+		dest[y] = src[y];
 	}
 
 	return(dest);
