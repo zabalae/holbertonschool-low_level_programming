@@ -31,7 +31,7 @@ char *_strncat(char *dest, char *src, int n)
 	count = y;
 	count1 = 0;
 
-	for (i = y; i <= n; i++)
+	for (i = y; i <= n + 1; i++)
 	{
 		while (count1 <= n)
 		{
