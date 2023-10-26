@@ -8,21 +8,25 @@
  * @src: String to be copied
  *
  * @n: Number of characters to be copied from source.
+ *
+ * Return: dest
  */
 
 char *_strncpy(char *dest, char *src, int n)
 {
 	int x = 0;
-	int y = 0;
 
 	while (src[x] != '\0' && x < n)
 	{
-		dest[y] = src[x];
-		y++;
+		dest[x] = src[x];
 		x++;
 	}
 
-	dest[y] = '\0';
+	while (x < n)
+	{
+		dest[x] = '\0';
+		x++;
+	}
 
 	return (dest);
 }
