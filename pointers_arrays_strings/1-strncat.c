@@ -28,7 +28,7 @@ char *_strncat(char *dest, char *src, int n)
 		y++;
 	}
 
-	z = x + y + 1;
+	z = n + 1;
 	count = y;
 	count1 = 0;
 
