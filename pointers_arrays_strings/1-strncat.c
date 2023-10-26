@@ -31,12 +31,16 @@ char *_strncat(char *dest, char *src, int n)
 	count = y;
 	count1 = 0;
 
-	for (i = y; i <= z; i++)
+	if (n > 0)
 	{
-		dest[count] = src[count1];
-		count++;
-		count1++;
-	}
 
-	return (dest);
+		for (i = y; i <= z; i++)
+		{	
+			dest[count] = src[count1];
+			count++;
+			count1++;
+		}
+
+		return (dest);
+	}
 }
