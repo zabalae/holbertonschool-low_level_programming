@@ -16,7 +16,7 @@ char *_strncat(char *dest, char *src, int n)
 {
 	int x = 0;
 	int y = 0;
-	int i, z, count, count1;
+	int i, count, count1;
 
 	while (src[x] != '\0')
 	{
@@ -28,11 +28,10 @@ char *_strncat(char *dest, char *src, int n)
 		y++;
 	}
 
-	z = n + 1;
 	count = y;
 	count1 = 0;
 
-	for (i = y; i <= z; i++)
+	for (i = y; i <= n; i++)
 	{
 		while (count1 <= n)
 		{
