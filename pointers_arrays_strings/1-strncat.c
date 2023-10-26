@@ -40,7 +40,7 @@ char *_strncat(char *dest, char *src, int n)
 			count++;
 			count1++;
 		}
-
-		return (dest);
 	}
+
+	return (dest);
 }
