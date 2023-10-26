@@ -26,7 +26,7 @@ char *_strcat(char *dest, char *src)
 		y++;
 	}
 
-        z = x + y;
+	z = x + y;
 	count = y + 1;
 	count1 = 0;
 
