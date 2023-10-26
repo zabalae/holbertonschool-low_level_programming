@@ -14,6 +14,8 @@ char *_strcat(char *dest, char *src)
 {
 	int x = 0;
 	int y = 0;
+	int i;
+
 
 	while (src[x] != '\0')
 	{
@@ -25,7 +27,8 @@ char *_strcat(char *dest, char *src)
 		y++;
 	}
 
-	int z = x + y;
+	int z;
+        z = x + y;
 	int count = y + 1;
 	int count1 = 0;
 
