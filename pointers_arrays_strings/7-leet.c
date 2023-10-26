@@ -39,4 +39,6 @@ char *leet(char *str)
             		str[x] = '1';
 		}
 	}
+
+	return (str);
 }
