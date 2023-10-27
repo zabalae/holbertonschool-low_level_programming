@@ -7,6 +7,7 @@
  *
  * @accept: The string containing the list of characters to match in s
  *
+ * Return: int
  */
 
 unsigned int _strspn(char *s, char *accept)
