@@ -10,33 +10,20 @@
 
 char *leet(char *str)
 {
-	int x;
+	int x, y;
+
+	char toReplace[] = "aeotl";
+	char replacements[] = "43071";
 
 	for (x = 0; str[x] != '\0'; x++)
-	{
-		if (str[x] == 'a' || str[x] == 'A')
+       	{
+		for (y = 0; toReplace[y] != '\0'; y++)
 		{
-			str[x] = '4';
-		}
-		
-		else if (str[x] == 'e' || str[x] == 'E')
-		{
-            		str[x] = '3';
-		}
-
-        	else if (str[x] == 'o' || str[x] == 'O')
-		{
-            		str[x] = '0';
-		}
-
-        	else if (str[x] == 't' || str[x] == 'T')
-		{
-            		str[x] = '7';
-		}
-
-        	else if (str[x] == 'l' || str[x] == 'L')
-		{
-            		str[x] = '1';
+			if (str[x] == toReplace[y] || str[x] == toReplace[y] - 'a' + 'A')
+			{
+ 				str[x] = replacements[y];
+				break;
+			}	
 		}
 	}
 
