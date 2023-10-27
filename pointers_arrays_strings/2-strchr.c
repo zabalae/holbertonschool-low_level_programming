@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+#define NULL ((void*)0)
 
 /**
  * _strchr - function that locates a character in a string
@@ -7,6 +7,8 @@
  * @s: string to be scanned
  *
  * @c: the character to be searched in s
+ *
+ * Return: s or NULL
  */
 
 char *_strchr(char *s, char c)
@@ -15,7 +17,7 @@ char *_strchr(char *s, char c)
 	{
 		if (*s == c)
 		{
-			return s;
+			return (s);
 		}
 
 		s++;
