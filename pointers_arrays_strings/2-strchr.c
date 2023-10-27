@@ -21,8 +21,13 @@ char *_strchr(char *s, char c)
 		}
 
 		s++;
+
+		if (*s == 0)
+		{
+			return (' ');
+		}
 	}
 
-	return ('\0');
+	return (0);
 
 }
