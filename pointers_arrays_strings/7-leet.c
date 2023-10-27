@@ -16,14 +16,14 @@ char *leet(char *str)
 	char replacements[] = "43071";
 
 	for (x = 0; str[x] != '\0'; x++)
-       	{
+	{
 		for (y = 0; toReplace[y] != '\0'; y++)
 		{
 			if (str[x] == toReplace[y] || str[x] == toReplace[y] - 'a' + 'A')
 			{
- 				str[x] = replacements[y];
+				str[x] = replacements[y];
 				break;
-			}	
+			}
 		}
 	}
 
