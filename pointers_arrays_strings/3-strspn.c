@@ -13,9 +13,32 @@ unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int x = 0;
 
-	while (s[x] == accept[x])
+	while (*s != '\0')
 	{
-		x++;
+		char *a = accept;
+		int found = 0;
+
+		while (*a != '\0')
+		{
+			if (*s == *a)
+			{
+				found = 1;
+				break;
+			}
+
+			a++;
+		}
+
+		if (found)
+		{
+			x++;
+			s++;
+		}
+
+		else
+		{
+			break;
+		}
 	}
 
 	return (x);
