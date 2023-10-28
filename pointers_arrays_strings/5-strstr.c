@@ -5,7 +5,7 @@
  *
  * @haystack: the main string to be scanned
  *
- * @needle the small string to be searched with-in haystack string
+ * @needle: the small string to be searched with-in haystack string
  *
  * Return: char
  */
