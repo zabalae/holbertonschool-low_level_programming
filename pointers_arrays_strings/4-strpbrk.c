@@ -6,7 +6,7 @@
  *
  * @s: The string to be scanned
  *
- * accept: string containing the characters to match
+ * @accept: string containing the characters to match
  *
  * Return: char
  */
