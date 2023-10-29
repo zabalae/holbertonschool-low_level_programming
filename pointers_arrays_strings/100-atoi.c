@@ -23,7 +23,6 @@ int _atoi(char *s)
 	{
 		len++;
 	}
-
 	while (x < len && j == 0)
 	{
 		if (s[x] == '-')
@@ -34,30 +33,20 @@ int _atoi(char *s)
 		if (s[x] >= '0' && s[x] <= '9')
 		{
 			digit = s[x] - '0';
-
 			if (y % 2)
-			{
 				digit = -digit;
-			}
 
 			z = z * 10 + digit;
 			j = 1;
-
 			if (s[x + 1] < '0' || s[x + 1] > '9')
-			{
 				break;
-			}
-
 			j = 0;
 		}
-
 		x++;
 	}
-
 	if (j == 0)
 	{
 		return (0);
 	}
-
 	return (z);
 }
