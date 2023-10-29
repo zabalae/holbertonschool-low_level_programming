@@ -35,7 +35,7 @@ int _atoi(char *s)
 		{
 			digit = s[x] - '0';
 
-			if (d % 2)
+			if (y % 2)
 			{
 				digit = -digit;
 			}
@@ -51,7 +51,7 @@ int _atoi(char *s)
 			j = 0;
 		}
 
-		x++
+		x++;
 	}
 
 	if (j == 0)
