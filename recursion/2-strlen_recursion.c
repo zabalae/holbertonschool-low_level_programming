@@ -19,7 +19,7 @@ int _strlen_recursion(char *s)
 
 	x++;
 
-	_print_rev_recursion(s + 1);
+	_strlen_recursion(s + 1);
 
-	return (0);
+	return (x);
 }
