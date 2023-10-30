@@ -18,5 +18,8 @@ int _strlen_recursion(char *s)
 	}
 
 	x++;
+
 	_print_rev_recursion(s + 1);
+
+	return (x);
 }
