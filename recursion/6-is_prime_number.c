@@ -26,8 +26,7 @@ int is_prime_helper(int divisor, int number)
 }
 
 /**
- * is_prime_number- function that returns 1 if is a prime number
- * otherwise return 0
+ * is_prime_number - function that returns 1 if is a prime number
  *
  * @n: number
  */
