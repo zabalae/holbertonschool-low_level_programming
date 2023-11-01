@@ -7,11 +7,6 @@
  *
  * @number: number
  *
- * is_prime_number- function that returns 1 if is a prime number
- * otherwise return 0
- *
- * @n: number
- *
  * Return: 1 if is prime 0 if its not
  */
 
@@ -29,6 +24,13 @@ int is_prime_helper(int divisor, int number)
 
 	return (is_prime_helper(divisor + 1, number));
 }
+
+/**
+ * is_prime_number- function that returns 1 if is a prime number
+ * otherwise return 0
+ *
+ * @n: number
+ */
 
 int is_prime_number(int n)
 {
