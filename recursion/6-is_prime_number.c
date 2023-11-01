@@ -27,7 +27,7 @@ int is_prime_helper(int divisor, int number)
 		return (0);
 	}
 
-	return (is_prime_helper(divisor + 1, number);
+	return (is_prime_helper(divisor + 1, number));
 }
 
 int is_prime_number(int n)
@@ -37,5 +37,5 @@ int is_prime_number(int n)
 		return (0);
 	}
 
-	return is_prime_helper(2, n);
+	return (is_prime_helper(2, n));
 }
