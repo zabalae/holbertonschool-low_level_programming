@@ -3,7 +3,13 @@
 /**
  * _sqrt_recursion - function that returns the natural square root of a number
  *
+ * find_sqrt - function to find the square root of a number
+ *
  * @n: int
+ *
+ * @left: range number
+ *
+ * @right: range number
  *
  * Return: natural square root
  */
@@ -17,7 +23,8 @@ int find_sqrt(int left, int right, int n)
 		return (mid);
 	}
 
-	if (left >= right - 1) {
+	if (left >= right - 1)
+	{
 		return (-1);
 	}
 
