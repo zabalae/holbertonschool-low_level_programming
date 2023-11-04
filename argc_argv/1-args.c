@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 		count /= 10;
 	}
 
-	putchar('\n');
+	_putchar('\n');
 
-	return 0;
+	return (0);
 }
