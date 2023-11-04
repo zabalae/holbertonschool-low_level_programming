@@ -13,11 +13,11 @@ int main(int argc, char *argv[])
 		for (x  = 0; argv[0][x] != '\0'; x++)
 		{
 
-		putchar(argv[0][x]);
+		_putchar(argv[0][x]);
 		
 		}
 
-	putchar('\n');
+	_putchar('\n');
 
 	}
 
