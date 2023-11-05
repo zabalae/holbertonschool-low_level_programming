@@ -5,10 +5,12 @@
  *
  * @argc: int that represents the number of command-line arguments
  *
- * Return: the number of arguments
+ * @argv: array of strings that stores the actual command-line arguments
+ *
+ * Return: 0
  */
 
-int main(int argc)
+int main(int argc, char *argv[] __attribute__((unused)))
 {
 	int count = argc - 1;
 
