@@ -1,57 +1,41 @@
 #include "main.h"
 
 /**
- * _sqrt_recursion - function that returns the natural square root of a number
- *
  * find_sqrt- function to find the square root of a number
  *
- * @n: int
+ * @x: previous number
  *
- * @left: range number
- *
- * @right: range number
+ * @y: square value
  *
  * Return: natural square root
  */
 
-int find_sqrt(int left, int right, int n)
+int find_sqrt(int x, int y)
 {
-	int mid = left + (right - left) / 2;
-
-	if ((mid * mid) == n)
-	{
-		return (mid);
-	}
-
-	if (left >= right - 1)
+	if (x > y)
 	{
 		return (-1);
 	}
 
-	if (mid * mid < n)
+	else if (x * x == y)
 	{
-		return (find_sqrt(mid, right, n));
+		return (x);
 	}
-	else
-	{
-		return (find_sqrt(left, mid, n));
-	}
+
+	return (find_sqrt(x + 1, y));
 }
+
+/**
+ * _sqrt_recursion - function that returns the natural square root of a number
+ * @n: int
+ * Return: square root
 
 int _sqrt_recursion(int n)
 {
-	if (n == 0 || n == 1)
-	{
-		return (n);
-	}
-
-	else if (n < 0)
+	if (n < 0)
 	{
 		return (-1);
 	}
 
-	else
-	{
-		return (find_sqrt(1, n, n));
-	}
+	return (find_sqrt(1, n));
 }
