@@ -14,6 +14,7 @@
 int main(int argc, char *argv[])
 {
 	int sum = 0;
+	int x;
 
 	if (argc < 2)
 	{
@@ -22,9 +23,9 @@ int main(int argc, char *argv[])
 
 	else
 	{
-		for (int i = 1; i < argc; i++)
+		for (x = 1; x < argc; x++)
 		{
-			char *arg = argv[i];
+			char *arg = argv[x];
 			int num = 0;
 
 			if (sscanf(arg, "%d", &num) == 1)
