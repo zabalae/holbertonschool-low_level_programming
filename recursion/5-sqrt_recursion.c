@@ -29,6 +29,7 @@ int find_sqrt(int x, int y)
  * _sqrt_recursion - function that returns the natural square root of a number
  * @n: int
  * Return: square root
+ */
 
 int _sqrt_recursion(int n)
 {
