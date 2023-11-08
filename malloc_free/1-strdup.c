@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-#include < stdlib.h>
+#include <stdlib.h>
 
 /**
  * _strdup - function tha returns a pinter to a newly allocated space in memory
