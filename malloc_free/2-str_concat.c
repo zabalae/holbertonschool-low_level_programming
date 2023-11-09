@@ -15,10 +15,6 @@ char *str_concat(char *s1, char *s2)
 	char *str;
 	int sum;
 
-	sum = strlen(s1) + strlen(s2);
-
-	str = (char *) malloc(sum + 1);
-
 	if (s1 == NULL)
 	{
 		s1 = "";
@@ -28,6 +24,9 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
+
+	sum = strlen(s1) + strlen(s2);
+	str = (char *) malloc (sum + 1);
 
 	if (str)
 	{
