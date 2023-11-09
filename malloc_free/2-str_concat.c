@@ -31,8 +31,8 @@ char *str_concat(char *s1, char *s2)
 
 	if (str)
 	{
-		str = strcpy (str, s1);
-		str = concat (str, s2);
+		str = strcpy(str, s1);
+		str = strcat(str, s2);
 
 		return (str);
 	}
