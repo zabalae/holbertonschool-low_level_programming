@@ -22,10 +22,8 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	}
 
 	if (p)
-	
 	{
-
-		for (x = 0; x <= nmemb; x++)
+		for (x = 0; x <= nmemb * size; x++)
 		{
 			p[x] = 0;
 		}
