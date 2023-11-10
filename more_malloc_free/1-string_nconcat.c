@@ -25,9 +25,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 	}
 
-	sum = strlen(s1) + strlen(s2);
+	sum = strlen(s1) + n;
 
-	str =  malloc(sum);
+	str =  malloc(sum + 1);
 
 	if (str)
 	{
