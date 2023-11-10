@@ -4,9 +4,10 @@
 #include <string.h>
 
 /**
- * calloc - function that allocates memory for an array using malloc
+ * _calloc - function that allocates memory for an array using malloc
  * @nmemb: number of elements to be allocated
  * @size: size of elements
+ * Return: pointer string
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
@@ -25,7 +26,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		for (x = 0; x <= nmemb * size; x++)
 		{
-			p[x] = 0;
+			*(p + x) = 0;
 		}
 
 		return (p);
