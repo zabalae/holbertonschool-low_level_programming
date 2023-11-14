@@ -14,7 +14,7 @@ void print_dog(struct dog *d)
 		exit(0);
 	}
 
-	if (d->name == true)
+	if (d->name != '\0'))
 	{
 		printf("Name: %s/n", d->name);
 	}
@@ -23,7 +23,7 @@ void print_dog(struct dog *d)
 		printf("Name: (nill)\n");
 	}
 
-	if (d->age == true)
+	if (d->age != '\0')
 	{
 		printf("Age: %f\n", d->age);
 	}
@@ -32,7 +32,7 @@ void print_dog(struct dog *d)
 		printf("Age: (nill)\n");
 	}
 
-	if (d->owner == true)
+	if (d->owner != '\0')
 	{
 		printf("Owner: %s\n", d->owner);
 	}
