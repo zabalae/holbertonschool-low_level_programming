@@ -14,27 +14,27 @@ void print_dog(struct dog *d)
 		exit(0);
 	}
 
-	if (d.name == true)
+	if (d->name == true)
 	{
-		printf("Name: %s/n", d.name);
+		printf("Name: %s/n", d->name);
 	}
 	else
 	{
 		printf("Name: (nill)\n");
 	}
 
-	if (d.age == true)
+	if (d->age == true)
 	{
-		printf("Age: %f\n", d.age);
+		printf("Age: %f\n", d->age);
 	}
 	else 
 	{
 		printf("Age: (nill)\n");
 	}
 
-	if (d.owner == true)
+	if (d->owner == true)
 	{
-		printf("Owner: %s\n", d.owner);
+		printf("Owner: %s\n", d->owner);
 	}
 	else
 	{
