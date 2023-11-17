@@ -14,7 +14,6 @@ void print_all(const char * const format, ...)
 	va_list list;
 
 	va_start(list, format);
-
 	while (format && format[x])
 	{
 		while (valid_args[y])
@@ -23,8 +22,7 @@ void print_all(const char * const format, ...)
 			{
 				printf(", ");
 				break;
-			}
-			y++;
+			}y++;
 		}
 
 		switch (format[x])
@@ -44,17 +42,15 @@ void print_all(const char * const format, ...)
 			case 's':
 				s = va_arg(list, char *);
 				printed = 1;
-				if (!s)					
+				if (!s)
 				{
-				printf("(nil)");
-				break;
+					printf("(nil)");
+					break;
 				}
 				printf("%s", s);
 				break;
-		}
-		x++;
+		}x++;
 	}
 	va_end(list);
 	printf("\n");
-
 }
