@@ -13,7 +13,7 @@ void print_all(const char * const format, ...)
 	int printed = 0, x = 0, y = 0;
 	va_list list;
 
-	va_start(args, format);
+	va_start(list, format);
 
 	while (format && format[x])
 	{
