@@ -10,12 +10,13 @@ void print_all(const char * const format, ...)
 {
 	const char valid_args[] = "cifs";
 	char *s;
-	unsigned int printed = 0, x = 0, y = 0;
+	unsigned int printed = 0, x = 0, y;
 	va_list list;
 
 	va_start(list, format);
 	while (format && format[x])
 	{
+		y = 0;
 		while (valid_args[y])
 		{
 			if (format[x] == valid_args[y] && printed)
