@@ -11,9 +11,9 @@ void print_all(const char * const format, ...)
 	const char valid_args[] = "cifs";
 	char *s;
 	int printed = 0, x = 0, y = 0;
-	va_liest list;
+	va_list list;
 
-	va start(args, format);
+	va_start(args, format);
 
 	while (format && format[x])
 	{
