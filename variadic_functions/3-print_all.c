@@ -3,7 +3,6 @@
 /**
  * print_all - function that prints anything
  * @format: list of all types of arguments passed to the function
- * Return: 0
  */
 
 void print_all(const char * const format, ...)
@@ -25,7 +24,6 @@ void print_all(const char * const format, ...)
 				break;
 			} y++;
 		}
-
 		switch (format[x])
 		{
 			case 'c':
@@ -47,7 +45,5 @@ void print_all(const char * const format, ...)
 				printf("%s", s);
 				break;
 		} x++;
-	}
-	va_end(list);
-	printf("\n");
+	} va_end(list), printf("\n");
 }
