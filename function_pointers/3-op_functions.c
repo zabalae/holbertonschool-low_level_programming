@@ -49,7 +49,7 @@ int op_div(int a, int b)
 }
 
 /**
- * op_mod -
+ * op_mod - module
  * @a: first number
  * @b: second number
  * Return: a % b
