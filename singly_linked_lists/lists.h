@@ -4,7 +4,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct Node 
+/**
+ * struct Node - singly linked list
+ * @str: string
+ * @len: length
+ * @next: pointer to the next node
+ */ 
+
+typedef struct Node
 {
 	char *str;
 	unsigned int len;
