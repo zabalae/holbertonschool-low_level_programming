@@ -9,7 +9,7 @@
  * @str: string
  * @len: length
  * @next: pointer to the next node
- */ 
+ */
 
 typedef struct Node
 {
