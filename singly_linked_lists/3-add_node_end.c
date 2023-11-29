@@ -18,7 +18,7 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	if (!new_element)
 	{
-		return (NULL)
+		return (NULL);
 	}
 
 	for (x = 0; str[x] != '\0'; x++)
@@ -30,7 +30,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	new_element->str = strdup(str);
 	new_element->next = NULL;
 
-	t = *head
+	t = *head;
 
 	while (t != '\0')
 	{
