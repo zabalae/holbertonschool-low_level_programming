@@ -28,8 +28,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	while ((r = read(o, buffer, letters)) > 0)
 	{
-		if (total + r > letters)
-			r = letters - total;
+		if (total + r > (ssize_t)letters)
+			r = (ssize_t) letters - total;
 		w = write(STDOUT_FILENO, buffer, r);
 		if (w == -1 || w != r)
 		{
@@ -38,6 +38,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 			return (total);
 		}
 		total += w;
+		if (total >= (ssize_t)letters)
+			break;
 	}
 
 	free(buffer);
