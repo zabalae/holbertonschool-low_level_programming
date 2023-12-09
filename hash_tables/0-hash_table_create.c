@@ -17,9 +17,9 @@ hash_table_t *hash_table_create(unsigned long int size)
 	}
 
 	newTable->size = size;
-	newTable->table = (struct KeyValue **)malloc(size * sizeof(struct KeyValue *));
+	newTable->array = (struct KeyValue **)malloc(size * sizeof(struct KeyValue *));
 
-	if (newTable->table == NULL)
+	if (newTable->array == NULL)
 	{
 		free(newTable);
 		return (NULL);
@@ -27,7 +27,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	for (x = 0; x < size; x++)
 	{
-		newTable->table[x] = NULL;
+		newTable->array[x] = NULL;
 	}
 
 	return (newTable);
