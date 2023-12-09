@@ -12,7 +12,8 @@
  * @next: pointer to the next node
  */
 
-struct KeyValue {
+struct KeyValue
+{
 	char *key;
 	int value;
 	struct KeyValue *next;
@@ -24,7 +25,8 @@ struct KeyValue {
  * @array: array
  */
 
-typedef struct {
+typedef struct
+{
 	unsigned long int size;
 	struct KeyValue **array;
 } hash_table_t;

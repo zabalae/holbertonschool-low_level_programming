@@ -8,7 +8,6 @@
 
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	unsigned long int x;
 	hash_table_t *newTable = (hash_table_t *)malloc(size * sizeof(hash_table_t));
 
 	if (newTable == NULL)
@@ -17,17 +16,12 @@ hash_table_t *hash_table_create(unsigned long int size)
 	}
 
 	newTable->size = size;
-	newTable->array = (struct KeyValue **)malloc(size * sizeof(struct KeyValue *));
+	newTable->array = (struct KeyValue **)calloc(size, sizeof(struct KeyValue *));
 
 	if (newTable->array == NULL)
 	{
 		free(newTable);
 		return (NULL);
-	}
-
-	for (x = 0; x < size; x++)
-	{
-		newTable->array[x] = NULL;
 	}
 
 	return (newTable);
