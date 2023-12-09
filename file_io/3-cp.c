@@ -1,5 +1,14 @@
 #include "main.h"
 
+/**
+ * handle_file_errors - handles error conditions related to file
+ * operations
+ * @fd1: file descriptor of the source file
+ * @fd2: file descriptor of the destination file
+ * @args: an array of strings containing the program's arguments
+ * Return: void
+ */
+
 void handle_file_errors(int fd1, int fd2, char *args[])
 {
 	if (fd1 == -1)
@@ -15,13 +24,20 @@ void handle_file_errors(int fd1, int fd2, char *args[])
 	}
 }
 
+/**
+ * main - main function
+ * @argc: holds the number of arguments passed
+ * @argv: array of strings containing the arguments
+ */
+
 int main(int argc, char *argv[])
 {
 	int src_fd, dest_fd, close_result;
 	ssize_t bytes_read, bytes_written;
 	char buffer[1024];
 
-	if (argc != 3) {
+	if (argc != 3)
+	{
 		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_to");
 			return (97);
 	}
@@ -42,13 +58,15 @@ int main(int argc, char *argv[])
 	} while (bytes_read == 1024);
 
 	close_result = close(src_fd);
-	if (close_result == -1) {
+	if (close_result == -1)
+	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", src_fd);
 		exit(100);
 	}
 
 	close_result = close(dest_fd);
-	if (close_result == -1) {
+	if (close_result == -1)
+	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", dest_fd);
 		exit(100);
 	}
