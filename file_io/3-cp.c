@@ -1,7 +1,5 @@
 #include "main.h"
 
-#define BUFFER_SIZE 1024
-
 void handle_file_errors(int fd1, int fd2, char *args[])
 {
 	if (fd1 == -1)
@@ -13,6 +11,7 @@ void handle_file_errors(int fd1, int fd2, char *args[])
 	if (fd2 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", args[2]);
+		exit(99);
 	}
 }
 
@@ -20,7 +19,7 @@ int main(int argc, char *argv[])
 {
 	int src_fd, dest_fd, close_result;
 	ssize_t bytes_read, bytes_written;
-	char buffer[BUFFER_SIZE];
+	char buffer[1024];
 
 	if (argc != 3) {
 		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_to");
@@ -32,7 +31,7 @@ int main(int argc, char *argv[])
 	handle_file_errors(src_fd, dest_fd, argv);
 
 	do {
-		bytes_read = read(src_fd, buffer, BUFFER_SIZE);
+		bytes_read = read(src_fd, buffer, 1024);
 		if (bytes_read == -1)
 			handle_file_errors(-1, 0, argv);
 
@@ -40,7 +39,7 @@ int main(int argc, char *argv[])
 		if (bytes_written == -1)
 			handle_file_errors(0, -1, argv);
 
-	} while (bytes_read == BUFFER_SIZE);
+	} while (bytes_read == 1024);
 
 	close_result = close(src_fd);
 	if (close_result == -1) {
