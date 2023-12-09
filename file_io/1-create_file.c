@@ -10,10 +10,13 @@
 int create_file(const char *filename, char *text_content)
 {
 	size_t len, bytes_written;
-	FILE *file = fopen(filename, "w");
+	int fd;
 
 	if (filename == NULL)
 		return (-1);
+	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
+	if (fd == -1)
+		return(-1);
 
 	if (text_content != NULL)
 	{
@@ -23,16 +26,20 @@ int create_file(const char *filename, char *text_content)
 			len++;
 		}
 
-		bytes_written = fwrite(text_content, sizeof(char), len, file);
+		bytes_written = write(fd, text_content, len);
 
 		if (bytes_written != len)
 		{
-			fclose(file);
+			close(fd);
 			return (-1);
 		}
 	}
 
-	fclose(file);
+	close(fd);
+
+	if (chmod(filename, 0600) == -1)
+		return (-1);
+
 	return(1);
 	
 }
