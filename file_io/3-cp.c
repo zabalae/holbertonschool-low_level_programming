@@ -28,6 +28,7 @@ void handle_file_errors(int fd1, int fd2, char *args[])
  * main - main function
  * @argc: holds the number of arguments passed
  * @argv: array of strings containing the arguments
+ * Return: 0
  */
 
 int main(int argc, char *argv[])
