@@ -6,7 +6,7 @@ void handle_file_errors(int fd1, int fd2, char *args[])
 {
 	if (fd1 == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", args[1];
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", args[1]);
 		exit(98);
 	}
 
