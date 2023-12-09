@@ -10,23 +10,15 @@
 int append_text_to_file(const char *filename, char *text_content)
 {
 	FILE *file;
-	FILE *file_check;
 
 	if (filename == NULL)
+		return (-1);
+	if (access(filename, F_OK) == -1 || access(filename, W_OK) == -1)
 		return (-1);
 
 	if (text_content == NULL)
 	{
-		file_check = fopen(filename, "r");
-		if (file_check != NULL)
-		{
-			fclose(file_check);
-			return (1);
-		}
-		else
-		{
-			return (-1);
-		}
+		return (1);
 	}
 
 	file = fopen(filename, "a");
@@ -36,7 +28,6 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	while (*text_content != '\0')
 	{
-		_putchar(*text_content);
 		fputc(*text_content++, file);
 	}
 
