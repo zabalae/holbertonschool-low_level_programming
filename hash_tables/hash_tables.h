@@ -21,12 +21,12 @@ struct KeyValue {
 /**
  * struct - Hash table structure
  * @size: size of the array
- * @table: table
+ * @array: array
  */
 
 typedef struct {
 	unsigned long int size;
-	struct KeyValue **table;
+	struct KeyValue **array;
 } hash_table_t;
 
 hash_table_t *hash_table_create(unsigned long int size);
