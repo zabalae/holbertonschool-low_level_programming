@@ -12,7 +12,7 @@
  * @next: pointer to the next node
  */
 
-struct KeyValue
+typedef struct KeyValue
 {
 	char *key;
 	int value;
