@@ -15,7 +15,7 @@
 typedef struct KeyValue
 {
 	char *key;
-	int value;
+	char *value;
 	struct KeyValue *next;
 	struct KeyValue *prev;
 } hash_node_t;
