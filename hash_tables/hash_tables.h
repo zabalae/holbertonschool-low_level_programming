@@ -6,7 +6,7 @@
 #include <stdio.h>
 
 /**
- * struct KeyValue- Hash table
+ * struct KeyValue - Hash table
  * @key: The key
  * @value: Value
  * @next: pointer to the next node
@@ -20,12 +20,12 @@ typedef struct KeyValue
 } KeyValue_t;
 
 /**
- * struct struct- Hash table structure
+ * struct HashTablet - Hash table structure
  * @size: size of the array
  * @array: array
  */
 
-typedef struct
+typedef struct HashTable
 {
 	unsigned long int size;
 	struct KeyValue **array;
