@@ -8,8 +8,8 @@ hash_node_t *find_or_insert_node(hash_node_t **head, const char *key, const char
 	{
 		if (strcmp(key, tmp->key) == 0)
 		{
-			free(tmp->value);
-			tmp->value = strdup(value);
+			free(*tmp->value);
+			*tmp->value = strdup(value);
 			return (*head);
 		}
 		tmp = tmp->next;
