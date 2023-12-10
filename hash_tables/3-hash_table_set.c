@@ -1,42 +1,45 @@
 #include "hash_tables.h"
 
-hash_node_t *find_or_insert_node(hash_node_t **head, const char *key, const char *value)
-{
-	hash_node_t *tmp;
-	tmp = *head;
+/**
+ * add_h - add node
+ * @head: head of the list
+ * @key: key
+ * @value: value to store
+ * Return: *head
+ */
 
-	while (tmp != NULL)
+hash_node_t *add_h(hash_node_t **head, const char *key, const char *value)
+{
+	hash_node_t *temp;
+
+	temp = *head;
+
+	while (temp != NULL)
 	{
-		if (strcmp(key, tmp->key) == 0)
+		if (strcmp(key, temp->key) == 0)
 		{
-			free(tmp->value);
-			tmp->value = strdup(value);
+			free(temp->value);
+			temp->value = strdup(value);
 			return (*head);
 		}
-		tmp = tmp->next;
+
+		temp = temp->next;
 	}
 
-	tmp = malloc(sizeof(hash_node_t));
-	if (tmp == NULL)
+	temp = malloc(sizeof(hash_node_t));
+
+	if (temp == NULL)
 	{
 		return (NULL);
 	}
 
-	tmp->key = strdup(key);
-	tmp->value = strdup(value);
-	tmp->next = NULL;
+	temp->key = strdup(key);
 
-	if (*head != NULL)
-	{
-		tmp->prev = *head;
+	temp->value = strdup(value);
 
-		(*head)->next = tmp;
-	}
-	else
-	{
-		tmp->prev = NULL;
-		*head = tmp;
-	}
+	temp->next = NULL;
+
+	*head = temp;
 
 	return (*head);
 }
@@ -51,30 +54,24 @@ hash_node_t *find_or_insert_node(hash_node_t **head, const char *key, const char
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int index;
+	unsigned long int x;
 
-	if (ht == NULL || key == NULL || *key == '\0')
+	if (ht == NULL)
 	{
-		return 0;
+		return (0);
 	}
 
-	index = key_index((unsigned char *)key, ht->size);
-
-	if (ht->array[index] == NULL)
+	if (key == NULL || *key == '\0')
 	{
-		ht->array[index] = malloc(sizeof(hash_node_t));
-		if (ht->array[index] == NULL)
-		{
-			return 0;
-		}
-		ht->array[index]->prev = NULL;
-		ht->array[index]->next = NULL;
+		return (0);
 	}
 
-	if (find_or_insert_node(&(ht->array[index]), key, value) == NULL)
+	x = key_index((unsigned char *)key, ht->size);
+
+	if (add_h(&(ht->array[x]), key, value) == NULL)
 	{
-		return 0;
+		return (0);
 	}
 
-	return 1;
+	return (1);
 }
