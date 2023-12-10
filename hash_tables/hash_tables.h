@@ -20,7 +20,7 @@ typedef struct KeyValue
 } KeyValue_t;
 
 /**
- * struct HashTablet - Hash table structure
+ * struct HashTable - Hash table structure
  * @size: size of the array
  * @array: array
  */
