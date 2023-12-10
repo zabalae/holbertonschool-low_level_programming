@@ -2,14 +2,15 @@
 
 hash_node_t *find_or_insert_node(hash_node_t **head, const char *key, const char *value)
 {
-	hash_node_t *tmp = *head;
+	hash_node_t *tmp;
+	tmp = *head;
 
 	while (tmp != NULL)
 	{
 		if (strcmp(key, tmp->key) == 0)
 		{
-			free(*tmp->value);
-			*tmp->value = strdup(value);
+			free(tmp->value);
+			tmp->value = strdup(value);
 			return (*head);
 		}
 		tmp = tmp->next;
