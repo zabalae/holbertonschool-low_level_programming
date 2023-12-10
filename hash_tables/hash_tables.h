@@ -17,7 +17,7 @@ typedef struct KeyValue
 	char *key;
 	int value;
 	struct KeyValue *next;
-};
+} KeyValue_t;
 
 /**
  * struct - Hash table structure
