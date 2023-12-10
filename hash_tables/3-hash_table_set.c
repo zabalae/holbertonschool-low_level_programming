@@ -11,35 +11,41 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
+	hash_node_t *tmp;
+	char *new_value;
+	unsigned long int initial_index;
 
-	if (ht == NULL || key == NULL || *key == '\0')
-	{
+	if (ht == NULL || ht->array = NULL || ht->size == 0)
 		return (0);
-	}
-
-	index = key_index((const unsigned char *) key, ht->size);
-
-	struct KeyValue *newPair;
-	newPair = (struct KeyValue *)malloc(sizeof(struct KeyValue));
-
-	if (newPair == NULL)
-	{
+	if (key == NULL || strlen(key) == 0 || value == NULL)
 		return (0);
+
+	index = key_index((const unsigned char *)key, ht->size);
+	initial_index = index;
+
+	while (ht->array[index] != NULL)
+	{
+		if (strcmp(ht->array[index]->key, key) == 0)
+		{
+			new_value = strdup(value);
+			if (new_value == NULL)
+			{
+				return (0);
+			}
+			free(ht->array[index]->value);
+			ht->array[index]->value = new_value;
+			return (1);
+		}
+		index = (index + 1) % ht->size;
+		if (index == initial_index)
+		{
+			return (0);
+		}
 	}
-
-	newPair->key = strdup(key);
-	newPair->value = (value != NULL) ? strdup(value) : strdup("");
-	newPair->next = NULL;
-
+	ht->array[index] = make_hash_node(key, value);
 	if (ht->array[index] == NULL)
 	{
-		ht-array[index] = newPair;
+		return (0);
 	}
-	else
-	{
-		newPair->next = ht->array[index];
-		ht->array[index] = newPair;
-	}
-
 	return (1);
 }
