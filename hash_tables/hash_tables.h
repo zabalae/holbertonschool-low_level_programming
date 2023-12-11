@@ -30,6 +30,7 @@ typedef struct HashTable
 {
 	unsigned long int size;
 	struct KeyValue **array;
+	struct KeyValue *head;
 } hash_table_t;
 
 hash_table_t *hash_table_create(unsigned long int size);
