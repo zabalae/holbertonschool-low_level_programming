@@ -1,49 +1,4 @@
 #include "hash_tables.h"
-
-/**
- * add_h - add node
- * @head: head of the list
- * @key: key
- * @value: value to store
- * Return: *head
- */
-
-hash_node_t *add_h(hash_node_t **head, const char *key, const char *value)
-{
-	hash_node_t *temp;
-
-	temp = *head;
-
-	while (temp != NULL)
-	{
-		if (strcmp(key, temp->key) == 0)
-		{
-			free(temp->value);
-			temp->value = strdup(value);
-			return (*head);
-		}
-
-		temp = temp->next;
-	}
-
-	temp = malloc(sizeof(hash_node_t));
-
-	if (temp == NULL)
-	{
-		return (NULL);
-	}
-
-	temp->key = strdup(key);
-
-	temp->value = strdup(value);
-
-	temp->next = NULL;
-
-	*head = temp;
-
-	return (*head);
-}
-
 /**
  * hash_table_set - function that adds an element to the hash table
  * @ht: is the hash table to add or update the key
@@ -54,24 +9,48 @@ hash_node_t *add_h(hash_node_t **head, const char *key, const char *value)
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int x;
+	hash_node_t *tmp;
+	unsigned long int index;
 
-	if (ht == NULL)
+	if (ht == NULL || key == NULL || *key == '\0')
+        	return (0);
+
+	index = key_index((unsigned char *)key, ht->size);
+
+	if (ht->array[index] == NULL)
 	{
-		return (0);
+        	ht->array[index] = malloc(sizeof(hash_node_t));
+		if (ht->array[index] == NULL)
+            		return (0);
+
+		ht->array[index]->key = strdup(key);
+		ht->array[index]->value = strdup(value);
+		ht->array[index]->next = NULL;
 	}
-
-	if (key == NULL || *key == '\0')
+	else
 	{
-		return (0);
-	}
+		tmp = ht->array[index];
 
-	x = key_index((unsigned char *)key, ht->size);
+		while (tmp->next != NULL)
+		{
 
-	if (add_h(&(ht->array[x]), key, value) == NULL)
-	{
-		return (0);
+			if (strcmp(tmp->key, key) == 0)
+			{
+				free(tmp->value);
+				tmp->value = strdup(value);
+				return (1);
+			}
+			tmp = tmp->next;
+		}
+
+		tmp->next = malloc(sizeof(hash_node_t));
+		if (tmp->next == NULL)
+			return (0);
+		tmp->next->key = strdup(key);
+		tmp->next->value = strdup(value);
+		tmp->next->next = NULL;
 	}
 
 	return (1);
+}
 }
